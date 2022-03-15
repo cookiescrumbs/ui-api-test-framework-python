@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    ui-tests:
+      build: 
+        context: .
+        dockerfile: ./docker-images/ui-tests.Dockerfile
+      environment:
+        CYPRESS_BASE_URL: 'https://sandbox-dashboard.primer.io'
+        CYPRESS_API_BASE_URL: 'https://dashboard.api.sandbox.core.primer.io'
+      volumes:
+        - ${PWD}/ui-tests:/ui-tests
+        - ${PWD}/test-framework-lib:/test-framework-lib
+        # use the node_modules from inside the container and not from local machine
+        - /ui-tests/node_modules
+   
+    ui-tests-m1:
+      build:
+        context: .
+        dockerfile: ./docker-images/ui-tests-m1.Dockerfile
+      environment:
+        CYPRESS_BASE_URL: 'https://sandbox-dashboard.primer.io'
+        CYPRESS_API_BASE_URL: 'https://dashboard.api.sandbox.core.primer.io'
+      volumes:
+        - ${PWD}/ui-tests:/ui-tests
+        - ${PWD}/test-framework-lib:/test-framework-lib
+        # use the node_modules from inside the container and not from local machine
+        - /ui-tests/node_modules

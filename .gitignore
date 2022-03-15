@@ -1,0 +1,10 @@
+# Directories
+*node_modules
+*build
+*dist
+
+# Files
+*DS_Store
+
+ui-tests/cypress/videos
+ui-tests/cypress/screenshots
