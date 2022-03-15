@@ -1,7 +1,7 @@
 # UI and API test framework
 
 This test framework uses Cypress & Typescript for e2e testing the UI.
-Docker & Docker compose 🐳  to run the tests local in containers or via a build pipeline platform (circleci there are other flavours)🍦
+Docker & Docker compose 🐳  to run the tests locally in containers or via a build pipeline platform ( like circleci ... there are other flavours)🍦
 
 
 ## Usage
